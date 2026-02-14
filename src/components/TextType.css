@@ -1,0 +1,27 @@
+.text-type {
+  display: inline-block;
+  font-family: inherit;
+}
+
+.text-type__content {
+  display: inline;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 200;
+  transition: opacity 0.1s ease;
+}
+
+.text-type__cursor--hidden {
+  opacity: 0 !important;
+}
+
+/* Ensure the cursor doesn't affect layout too much */
+.text-type__cursor {
+  width: 0.1em;
+  background-color: currentColor;
+  height: 1.1em;
+  vertical-align: middle;
+}

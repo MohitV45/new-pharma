@@ -1,0 +1,230 @@
+/**
+ * Production-Optimized Stylesheet
+ * Pharma Website - Lighthouse 100 Target
+ * 
+ * Performance Features:
+ * - GPU-accelerated animations (will-change hints)
+ * - CSS animations instead of JS (reduced bundle size)
+ * - Tailwind utilities for consistency
+ * - Smooth scrolling and anti-aliasing
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-slate-900;
+    overflow-x: hidden;
+    /* Removed transition to avoid conflicts with Framer Motion */
+  }
+
+  /* Professional Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fdfdfd;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 100px;
+    transition: background 0.3s var(--ease-cinematic);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d8;
+  }
+}
+
+@layer components {
+  /* Section Divider */
+  .section-divider {
+    @apply relative;
+  }
+
+  /* Hero indicator shimmer (only for active slide) */
+  .hero-indicator-active {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-indicator-active::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+    transform: translateX(-120%);
+    animation: hero-indicator-shimmer 2.8s linear infinite;
+    opacity: 0.8;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  .section-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-50;
+  }
+
+  /* Fade-in animation for sections - uses CSS animation for better performance */
+  .fade-in-section {
+    animation: fadeInSection 0.8s var(--ease-cinematic) forwards;
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  /* Smooth reveal animation */
+  .animate-fade-up {
+    animation: fadeUp 1.2s var(--ease-cinematic) forwards;
+  }
+
+  @keyframes hero-indicator-shimmer {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pillSlide {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 500px;
+    }
+  }
+
+  @keyframes hero-slide {
+    from {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Hero slide crossfade - smooth transition without white flash */
+  @keyframes heroSlideCrossfade {
+    0% {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .hero-slide-transition {
+    animation: heroSlideCrossfade 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    will-change: opacity, transform;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+
+  .animate-progress {
+    animation: progress 8s linear forwards;
+    will-change: transform;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(12deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(15deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Text balance for headlines */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
