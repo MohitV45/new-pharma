@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { History, Factory, Award, ShieldCheck } from 'lucide-react';
+import reltsenBuilding from '../assets/reltsen-building.jpg';
 import OptimizedImage from './OptimizedImage';
 
 function About() {
@@ -49,8 +50,8 @@ function About() {
                     className="flex items-center gap-3 p-4 bg-slate-50 border-l-4 border-amber-500 rounded-r-md fade-in-section"
                     style={{ animationDelay: `${0.6 + (i * 0.1)}s` }}
                   >
-                    <ShieldCheck className="text-amber-600" size={20} />
-                    <span className="text-slate-800 font-bold text-sm">{cert}</span>
+                    <ShieldCheck size={20} className="text-amber-600 flex-shrink-0" />
+                    <span className="font-medium text-slate-900 text-sm">{cert}</span>
                   </div>
                 ))}
               </div>
@@ -61,12 +62,12 @@ function About() {
           <div className="lg:w-1/2 relative">
             <div className="relative z-10 fade-in-section">
               <OptimizedImage 
-                src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1780&auto=format&fit=crop" 
-                alt="Modern Laboratory"
+                src={reltsenBuilding} 
+                alt="Reltsen Health Care Facility Building"
                 width={1780}
                 height={1187}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="rounded-sm shadow-2xl grayscale-[10%] hover:grayscale-0 transition-all duration-700"
+                className="rounded-sm shadow-2xl hover:scale-[1.02] transition-all duration-700"
               />
               
               {/* Floating Stat Block */}

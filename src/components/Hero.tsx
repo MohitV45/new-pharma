@@ -2,6 +2,8 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useState, useEffect, memo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import facilityImg from '../assets/facility.jpg';
+import manufacturing1 from '../assets/manufacturing-1.jpg';
+import manufacturing2 from '../assets/manufacturing-2.jpg';
 import OptimizedImage from './OptimizedImage';
 
 function Hero() {
@@ -17,20 +19,18 @@ function Hero() {
         'Our Puducherry facility is equipped with advanced infrastructure and centralized AHU systems to ensure high-standard production.'
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1582719202047-76d3432ee323?q=80&w=2040&auto=format&fit=crop',
-      tag: 'CORE MISSION',
-      title: 'Reliability, Humanity, and Caring.',
+      image: manufacturing1,
+      tag: 'MANUFACTURING EXCELLENCE',
+      title: 'Precision in Every Process.',
       subtext:
-        'Reltsen Health Care provides superior pharmaceutical products and services that improve the quality of life globally.'
+        'State-of-the-art production lines with certified professionals ensuring pharmaceutical-grade quality at every step.'
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop',
-      tag: 'QUALITY POLICY',
-      title: 'Preserving and Improving Human Life.',
+      image: manufacturing2,
+      tag: 'QUALITY ASSURANCE',
+      title: 'Advanced Manufacturing Technology.',
       subtext:
-        'Our stringent quality policies are dedicated to the highest standards of pharmaceutical manufacturing.'
+        'Our automated systems and stringent quality controls guarantee pharmaceutical excellence in every batch we produce.'
     }
   ];
 

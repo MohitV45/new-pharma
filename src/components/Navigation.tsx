@@ -9,7 +9,7 @@ function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const isManualScrolling = useRef(false);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
-  const sectionIds = ['home', 'about', 'services', 'products', 'contact'];
+  const sectionIds = ['home', 'about', 'services', 'gallery', 'products', 'contact'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,10 +73,11 @@ function Navigation() {
 
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'Our Story' },
-    { id: 'services', label: 'Capabilities' },
+    { id: 'about', label: 'About Us' },
+    { id: 'services', label: 'Facilities' },
+    { id: 'gallery', label: 'Gallery' },
     { id: 'products', label: 'Products' },
-    { id: 'contact', label: 'Inquiries' }
+    { id: 'contact', label: 'Contact Us' }
   ];
 
   return (

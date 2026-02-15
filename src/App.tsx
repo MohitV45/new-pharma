@@ -6,6 +6,7 @@ import Loader from './components/Loader';
 
 const About = lazy(() => import('./components/About'));
 const Services = lazy(() => import('./components/Services'));
+const Gallery = lazy(() => import('./components/Gallery'));
 const Products = lazy(() => import('./components/Products'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
@@ -39,6 +40,7 @@ function App() {
         <Suspense fallback={null}>
           <About />
           <Services />
+          <Gallery />
           <Products />
           <Contact />
           <Footer />
