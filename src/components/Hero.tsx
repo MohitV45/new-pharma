@@ -95,7 +95,7 @@ function Hero() {
                 height={1080}
                 priority={isLcpSlide}
                 sizes="100vw"
-                className="w-full h-full object-cover brightness-[1.1] opacity-60"
+                className="w-full h-full object-cover brightness-[1.25] opacity-75"
               />
 
               {/* Combined cinematic overlay (performance-friendly) */}
