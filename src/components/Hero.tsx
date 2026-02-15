@@ -84,7 +84,7 @@ function Hero() {
             <div 
               className="absolute inset-0"
               style={{
-                transform: `translate(${mousePosition.x * -40}px, ${mousePosition.y * -40}px) scale(1.2)`,
+                transform: `translate(${mousePosition.x * -5}px, ${mousePosition.y * -5}px) scale(1.15)`,
                 transition: 'transform 0.2s ease-out'
               }}
             >
@@ -95,7 +95,7 @@ function Hero() {
                 height={1080}
                 priority={isLcpSlide}
                 sizes="100vw"
-                className="w-full h-full object-cover grayscale-[20%] brightness-[0.8]"
+                className="w-full h-full object-cover brightness-[1.1] opacity-60"
               />
 
               {/* Combined cinematic overlay (performance-friendly) */}
