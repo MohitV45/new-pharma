@@ -135,19 +135,6 @@ function Navigation() {
             </div>
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden lg:block">
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className={`px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 border-2 shadow-md hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg ${
-                scrolled 
-                ? 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white shadow-slate-900/10 hover:shadow-slate-900/25' 
-                : 'border-white text-white hover:bg-white hover:text-slate-900 shadow-black/10 hover:shadow-white/25'
-              }`}
-            >
-              Get Started
-            </button>
-          </div>
 
           {/* Mobile Toggle */}
           <div className="md:hidden">
