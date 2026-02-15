@@ -1,3 +1,4 @@
+// Deployment Heartbeat: Syncing with Vercel authorized credentials
 import { Suspense, lazy, useState, useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navigation from './components/Navigation';
