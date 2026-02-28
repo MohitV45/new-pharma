@@ -124,7 +124,7 @@ function Hero() {
                 style={{ animationDelay: '0.4s' }}
               >
                 <span className="h-[2px] w-8 bg-amber-500" />
-                <span className="text-amber-500 font-bold tracking-widest text-sm uppercase px-3 py-1 bg-black/30 backdrop-blur-sm border border-amber-500/20">
+                <span className="text-amber-400 font-bold tracking-widest text-sm uppercase px-3 py-1 bg-black/50 backdrop-blur-md border border-amber-400/20 shadow-xl">
                   {slides[currentSlide].tag}
                 </span>
               </div>
@@ -162,7 +162,7 @@ function Hero() {
                       .getElementById('contact')
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }
-                  className="group bg-amber-600 text-white px-8 md:px-12 py-4 md:py-5 font-bold flex items-center justify-center gap-3 shadow-lg shadow-amber-500/25 transition-all duration-300 hover:-translate-y-1.5 active:scale-95 hover:bg-amber-500"
+                  className="group bg-amber-700 text-white px-8 md:px-12 py-4 md:py-5 font-bold flex items-center justify-center gap-3 shadow-lg shadow-amber-900/25 transition-all duration-300 hover:-translate-y-1.5 active:scale-95 hover:bg-amber-600 text-base md:text-lg"
                 >
                   Contact Us
                   <ArrowRight

@@ -50,11 +50,13 @@ export default function Footer() {
             <div className="mb-8 cursor-pointer group" onClick={scrollToTop}>
               <img 
                 src={logo} 
-                alt="Retlsen Health Care" 
+                alt="Reltsen Health Care Logo" 
+                width={160}
+                height={56}
                 className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-sm mb-8">
+            <p className="text-gray-700 text-sm leading-relaxed max-w-sm mb-8 font-medium">
               Reliability, Humanity, and Caring. A leading pharmaceutical manufacturer dedicated to preserving and improving human life through superior science and manufacturing excellence.
             </p>
             <div className="mb-8">
@@ -76,7 +78,7 @@ export default function Footer() {
                         const el = document.getElementById(link.id);
                         if (el) el.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="text-gray-500 hover:text-amber-600 text-sm font-medium transition-colors"
+                      className="text-gray-700 hover:text-amber-800 text-sm font-semibold transition-colors"
                     >
                       {link.name}
                     </button>
@@ -90,7 +92,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-wrap justify-center md:justify-start gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
-            <span>&copy; {currentYear} Reltsen Health Care</span>
+            <span className="text-gray-600">&copy; {currentYear} Reltsen Health Care</span>
             <a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-900 transition-colors">Terms of Use</a>
             <a href="#" className="hover:text-slate-900 transition-colors">Sitemap</a>

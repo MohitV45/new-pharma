@@ -97,13 +97,13 @@ function Navigation() {
             <div className={`relative transition-all duration-500 ${scrolled ? 'scale-90' : 'scale-110'}`}>
               <OptimizedImage
                 src={logo}
-                alt="Retlsen Health Care"
+                alt="Reltsen Health Care Logo"
                 width={160}
                 height={48}
                 priority
                 className={`h-12 w-auto object-contain transition-all duration-300 ${
                   scrolled ? 'brightness-100' : 'brightness-0 invert'
-                }`}
+                } hover:opacity-90`}
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ function Navigation() {
                   className={`relative px-6 py-2 text-xs font-black uppercase tracking-widest transition-all duration-500 z-10 ${
                     activeSection === link.id 
                       ? (scrolled ? 'text-white' : 'text-slate-900') 
-                      : (scrolled ? 'text-slate-500 hover:text-slate-900' : 'text-white/70 hover:text-white')
+                      : (scrolled ? 'text-slate-700 hover:text-slate-950 pr-1' : 'text-white/80 hover:text-white pr-1')
                   }`}
                 >
                   {link.label}
@@ -163,8 +163,8 @@ function Navigation() {
                 onClick={() => scrollToSection(link.id)} 
                 className={`block w-full text-left py-4 px-6 text-sm font-black uppercase tracking-wider transition-all ${
                   activeSection === link.id 
-                  ? 'text-amber-600 bg-amber-50 rounded-lg' 
-                  : 'text-slate-600 hover:text-amber-600'
+                  ? 'text-amber-700 bg-amber-50 rounded-lg' 
+                  : 'text-slate-700 hover:text-amber-700'
                 }`}
               >
                 {link.label}

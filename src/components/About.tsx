@@ -31,7 +31,7 @@ function About() {
                 <span className="text-amber-600">Since 2011</span>
               </h2>
               
-              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
                   Reltsen Health Care was established in the year 2011 as a Medium Scale Industry in the centrally located industrial area of <span className="text-slate-900 font-semibold">Puducherry, India</span>. 
                 </p>
@@ -75,7 +75,7 @@ function About() {
                 className="absolute -bottom-10 -left-10 bg-slate-900 p-8 text-white hidden md:block border-b-8 border-amber-600 shadow-2xl fade-in-section"
                 style={{ animationDelay: '0.8s' }}
               >
-                <div className="text-5xl font-bold mb-1">14+</div>
+                <h3 className="text-5xl font-bold mb-1">14+</h3>
                 <div className="text-amber-500 font-bold uppercase tracking-widest text-xs">Years of Stability</div>
               </div>
             </div>
@@ -113,12 +113,12 @@ function About() {
               style={{ animationDelay: `${0.2 + (i * 0.15)}s` }}
             >
               <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <div className="p-2 bg-amber-100 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
+                <div className="p-2 bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
                   <item.icon size={20} />
                 </div>
                 {item.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 {item.text}
               </p>
             </div>

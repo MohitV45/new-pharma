@@ -81,7 +81,7 @@
 
   .section-divider::after {
     content: '';
-    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-50;
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent opacity-50;
   }
 
   /* Fade-in animation for sections - uses CSS animation for better performance */
@@ -226,5 +226,15 @@
   /* Text balance for headlines */
   .text-balance {
     text-wrap: balance;
+  }
+  /* Loader animations */
+  @keyframes loader-motion {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(3px); }
+  }
+
+  @keyframes loader-road {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(-350px); }
   }
 }

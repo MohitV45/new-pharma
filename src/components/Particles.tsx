@@ -197,13 +197,22 @@ const Particles: React.FC<ParticlesProps> = ({
     });
 
     const particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
-
     let animationFrameId: number;
     let lastTime = performance.now();
     let elapsed = 0;
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(container);
 
     const update = (t: number) => {
       animationFrameId = requestAnimationFrame(update);
+      if (!isVisible) return; // Optimization: skip rendering when not visible
+
       const delta = t - lastTime;
       lastTime = t;
       elapsed += delta * speed;
@@ -235,6 +244,7 @@ const Particles: React.FC<ParticlesProps> = ({
         window.removeEventListener('mousemove', handleMouseMove);
       }
       cancelAnimationFrame(animationFrameId);
+      observer.disconnect();
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }

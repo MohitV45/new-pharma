@@ -17,19 +17,13 @@ function App() {
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setTimeout(() => {
-        setFading(true);
-        setTimeout(() => setLoading(false), 1000);
-      }, 2000); // 2 second loader display
-    };
+    // Optimization: Start fading the loader as soon as possible
+    const timer = setTimeout(() => {
+      setFading(true);
+      setTimeout(() => setLoading(false), 800); // Slightly faster transition
+    }, 1500); // Balanced loader display time
 
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -38,7 +32,7 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300 overflow-x-hidden">
         <Navigation />
         <Hero />
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="h-64 bg-slate-50 animate-pulse" />}>
           <About />
           <Services />
           <Gallery />

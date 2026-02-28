@@ -96,7 +96,7 @@ export default function Contact() {
               <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 Partnering for Global <span className="text-amber-600">Health Solutions</span>
               </h2>
-              <p className="text-lg text-gray-500 mb-12 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-12 leading-relaxed font-medium">
                 Connect with our expert team to discuss your manufacturing requirements or explore technical partnerships.
               </p>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wider mb-1">{info.title}</h3>
                       <p className="text-slate-900 font-medium mb-1 group-hover:text-amber-700 transition-colors duration-300">{info.detail}</p>
-                      <p className="text-xs text-gray-400 font-bold">{info.subDetail}</p>
+                      <p className="text-xs text-gray-700 font-bold">{info.subDetail}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -135,7 +135,7 @@ export default function Contact() {
             >
               <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Full Name</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-600">Full Name</label>
                   <input
                     type="text"
                     name="user_name"
@@ -147,7 +147,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Professional Email</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-600">Professional Email</label>
                   <input
                     type="email"
                     name="user_email"
@@ -159,7 +159,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Subject / Inquiry Type</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-600">Subject / Inquiry Type</label>
                   <input
                     type="text"
                     name="subject"
@@ -171,7 +171,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Message Details</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-600">Message Details</label>
                   <textarea
                     name="message"
                     required

@@ -38,13 +38,13 @@ function Services() {
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Manufacturing <br />Capabilities & Capacity
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-700 text-lg">
               In our firm we produce high-precision pharmaceutical formulations. The following output matrix details our current operational capacity per annum.
             </p>
           </div>
           <div className="hidden md:block">
             <div className="p-6 bg-white border-t-4 border-amber-600 shadow-lg rounded-sm">
-              <div className="text-xs text-gray-500 font-bold uppercase mb-1">System Status</div>
+              <div className="text-xs text-gray-700 font-bold uppercase mb-1">System Status</div>
               <div className="text-green-600 font-bold flex items-center gap-2">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -66,7 +66,7 @@ function Services() {
               <BarChart3 size={20} className="text-amber-500" />
               ANNUAL PRODUCTION MATRIX
             </h3>
-            <span className="text-xs text-slate-400 font-mono bg-slate-800 px-3 py-1 rounded">DOC_CAPACITY_2024_V1</span>
+            <span className="text-xs text-slate-500 font-mono bg-slate-800 px-3 py-1 rounded">DOC_CAPACITY_2024_V1</span>
           </div>
 
           {/* Dashboard Grid */}
@@ -89,7 +89,7 @@ function Services() {
                   </div>
                   <div>
                     <h4 className="text-2xl font-black text-slate-900 tracking-tight">{cap.type}</h4>
-                    <p className="text-sm text-gray-400 font-medium">Production Capacity</p>
+                    <p className="text-sm text-gray-600 font-medium">Production Capacity</p>
                   </div>
                 </div>
 
@@ -108,7 +108,7 @@ function Services() {
                       }`}
                       style={{ animationDelay: `${0.6 + (i * 0.2) + (idx * 0.1)}s` }}
                     >
-                      <div className={`flex items-center gap-2 ${stat.type === 'highlight' ? (cap.color === 'amber' ? 'text-amber-600' : 'text-emerald-600') : 'text-gray-400'} mb-3`}>
+                      <div className={`flex items-center gap-2 ${stat.type === 'highlight' ? (cap.color === 'amber' ? 'text-amber-600' : 'text-emerald-600') : 'text-gray-500'} mb-3`}>
                         <stat.icon size={16} />
                         <span className="text-xs font-bold uppercase tracking-wider">{stat.label}</span>
                       </div>
@@ -116,7 +116,7 @@ function Services() {
                         <span className={`${stat.type === 'highlight' ? `text-4xl font-black ${cap.color === 'amber' ? 'text-amber-700' : 'text-emerald-700'}` : 'text-3xl font-black text-slate-700 group-hover:text-slate-900 transition-colors'}`}>
                           {stat.value}
                         </span>
-                        <span className={`text-sm font-bold ${stat.type === 'highlight' ? (cap.color === 'amber' ? 'text-amber-500' : 'text-emerald-500') : 'text-gray-400 font-semibold'}`}>
+                        <span className={`text-sm font-bold ${stat.type === 'highlight' ? (cap.color === 'amber' ? 'text-amber-500' : 'text-emerald-500') : 'text-gray-600 font-semibold'}`}>
                           UNITS
                         </span>
                       </div>
@@ -133,7 +133,7 @@ function Services() {
           <div className="space-y-8 fade-in-section">
             <div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Relentless Quality Systems (QA/QC)</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed">
                 Reltsen maintains a relentless focus on Quality Control (QC) and Quality Assurance (QA). Our systems are rooted in the belief that quality management defines organization-wide competences.
               </p>
             </div>
@@ -141,12 +141,12 @@ function Services() {
               <div className="p-6 bg-white border border-gray-100 shadow-sm hover:border-amber-500 hover:shadow-md transition-all rounded-lg">
                 <ShieldCheck className="text-amber-600 mb-4" size={32} />
                 <h4 className="font-bold text-slate-900 mb-2">Quality Assurance</h4>
-                <p className="text-sm text-gray-500">Totality of arrangements ensuring products meet international intended use standards.</p>
+                <p className="text-sm text-gray-700">Totality of arrangements ensuring products meet international intended use standards.</p>
               </div>
               <div className="p-6 bg-white border border-gray-100 shadow-sm hover:border-amber-500 hover:shadow-md transition-all rounded-lg">
                 <Microscope className="text-amber-600 mb-4" size={32} />
                 <h4 className="font-bold text-slate-900 mb-2">Quality Control</h4>
-                <p className="text-sm text-gray-500">Stringent testing at every gateway from procurement to final release.</p>
+                <p className="text-sm text-gray-700">Stringent testing at every gateway from procurement to final release.</p>
               </div>
             </div>
           </div>

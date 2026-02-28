@@ -9,30 +9,37 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "es2018",
+    target: "esnext",
     sourcemap: false,
     cssCodeSplit: true,
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 400,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "react-vendor": ["react", "react-dom"],
-          "animation-vendor": ["framer-motion"],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-core';
+            }
+            if (id.includes('framer-motion') || id.includes('gsap')) {
+              return 'vendor-animation';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            return 'vendor-others';
+          }
         },
-        // Optimize file naming
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
     },
     minify: "esbuild",
-    // Inline small assets as base64
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048,
   },
   optimizeDeps: {
     include: ["react", "react-dom"],
-    exclude: [],
   },
   esbuild: {
     legalComments: "none",
