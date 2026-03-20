@@ -50,7 +50,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Inquiries',
-      detail: '+91 1800-XXX-XXXX',
+      detail: '+91 99626 41318 / 98844 26081',
       subDetail: 'Direct line for manufacturers'
     },
     {
@@ -62,8 +62,8 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Global Hub',
-      detail: 'Mundiyampakkam, Villupuram',
-      subDetail: 'Tamil Nadu, India'
+      detail: 'Thirubhuvanai, Puducherry',
+      subDetail: 'India'
     }
   ];
 
@@ -215,7 +215,7 @@ export default function Contact() {
           className="mt-20 filter grayscale-[100%] hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=Reltsen%20Health%20Care%20Mundiyampakkam&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=Reltsen%20Health%20Care%20Thirubhuvanai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="350" 
             style={{ border: 0 }} 

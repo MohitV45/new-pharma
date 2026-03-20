@@ -1,7 +1,6 @@
 import { memo, useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, ZoomIn, Grid } from 'lucide-react';
-import gallery1 from '../assets/gallery/gallery-1.jpg';
 import gallery2 from '../assets/gallery/gallery-2.jpg';
 import gallery3 from '../assets/gallery/gallery-3.jpg';
 import gallery4 from '../assets/gallery/gallery-4.jpg';
@@ -11,11 +10,8 @@ import gallery10 from '../assets/gallery/gallery-10.jpg';
 import gallery11 from '../assets/gallery/gallery-11.jpg';
 import gallery12 from '../assets/gallery/gallery-12.jpg';
 import gallery13 from '../assets/gallery/gallery-13.jpg';
-import gallery14 from '../assets/gallery/gallery-14.jpg';
 import gallery15 from '../assets/gallery/gallery-15.jpg';
 import gallery16 from '../assets/gallery/gallery-16.jpg';
-import gallery17 from '../assets/gallery/gallery-17.jpg';
-import gallery18 from '../assets/gallery/gallery-18.jpg';
 import gallery19 from '../assets/gallery/gallery-19.jpg';
 import gallery20 from '../assets/gallery/gallery-20.jpg';
 import gallery21 from '../assets/gallery/gallery-21.jpg';
@@ -24,6 +20,7 @@ import gallery23 from '../assets/gallery/gallery-23.jpg';
 import gallery24 from '../assets/gallery/gallery-24.jpg';
 import gallery25 from '../assets/gallery/gallery-25.jpg';
 import gallery26 from '../assets/gallery/gallery-26.jpg';
+import compressionMachine from '../assets/gallery/compression-machine.jpeg';
 import OptimizedImage from './OptimizedImage';
 
 const CATEGORIES = ['Manufacturing', 'Quality Control', 'Infrastructure'] as const;
@@ -31,28 +28,25 @@ type Category = typeof CATEGORIES[number];
 
 const galleryImages = [
   { src: gallery5, alt: 'Blister packaging production line', title: 'Advanced Packaging Line', category: 'Manufacturing' },
-  { src: gallery6, alt: 'Cleanroom corridor with blue flooring', title: 'Sterile Manufacturing Zone', category: 'Manufacturing' },
-  { src: gallery1, alt: 'Capsule filling equipment', title: 'Tablet Press Machine', category: 'Manufacturing' },
+  { src: gallery6, alt: 'Cleanroom corridor with blue flooring', title: 'Manufacturing Zone', category: 'Manufacturing' },
+  { src: compressionMachine, alt: 'Compression tablet machine', title: 'Compression Tablet Machine', category: 'Manufacturing' },
   { src: gallery2, alt: 'Pharmaceutical tablets', title: 'Precision Manufacturing', category: 'Manufacturing' },
   { src: gallery3, alt: 'Cleanroom worker', title: 'Quality Control Process', category: 'Quality Control' },
   { src: gallery4, alt: 'Blister packaging machine', title: 'Automated Packaging', category: 'Manufacturing' },
-  { src: gallery10, alt: 'Industrial machinery', title: 'Advanced Coating Unit', category: 'Manufacturing' },
-  { src: gallery11, alt: 'Sterile manufacturing facility', title: 'State-of-the-Art Facility', category: 'Manufacturing' },
+  { src: gallery10, alt: 'Industrial machinery', title: 'Advanced Manufacturing Process', category: 'Manufacturing' },
+  { src: gallery11, alt: 'Sterile manufacturing facility', title: 'Advanced capsules filling', category: 'Manufacturing' },
   { src: gallery12, alt: 'Pharmaceutical production floor', title: 'Production Floor', category: 'Manufacturing' },
   { src: gallery13, alt: 'Advanced testing laboratory', title: 'Research & Development', category: 'Quality Control' },
-  { src: gallery14, alt: 'Automated tablet counting system', title: 'Automated Counting', category: 'Manufacturing' },
-  { src: gallery15, alt: 'Sterile packaging environment', title: 'Sterile Packaging', category: 'Manufacturing' },
+  { src: gallery15, alt: 'Sterile packaging environment', title: 'Manufacturing Zone', category: 'Manufacturing' },
   { src: gallery16, alt: 'Quality control inspection station', title: 'Inspection Unit', category: 'Quality Control' },
-  { src: gallery17, alt: 'Large scale pharmaceutical mixer', title: 'Bulk Processing', category: 'Manufacturing' },
-  { src: gallery18, alt: 'Precision labeling machine', title: 'Precision Labeling', category: 'Manufacturing' },
-  { src: gallery19, alt: 'Warehousing and logistics area', title: 'Logistics Center', category: 'Infrastructure' },
+  { src: gallery19, alt: 'Storage facility overview', title: 'Raw Material Storage', category: 'Infrastructure' },
   { src: gallery20, alt: 'Microbiology testing lab', title: 'Microbiology Lab', category: 'Quality Control' },
   { src: gallery21, alt: 'Purified water system', title: 'Water Treatment Plant', category: 'Infrastructure' },
   { src: gallery22, alt: 'HVAC system', title: 'Air Filtration System', category: 'Infrastructure' },
-  { src: gallery23, alt: 'High-speed blister packing machine', title: 'High-Speed Packing', category: 'Manufacturing' },
+  { src: gallery23, alt: 'High-speed blister packing machine', title: 'Advanced manufacturing process', category: 'Manufacturing' },
   { src: gallery24, alt: 'Finished product storage facility', title: 'Controlled Storage', category: 'Infrastructure' },
   { src: gallery25, alt: 'Chemical analysis equipment', title: 'Chemical Analysis', category: 'Quality Control' },
-  { src: gallery26, alt: 'Pharmaceutical compounding area', title: 'Compounding Zone', category: 'Manufacturing' }
+  { src: gallery26, alt: 'Pharmaceutical compounding area', title: 'Advanced Capsules filling', category: 'Manufacturing' }
 ];
 
 function Gallery() {
