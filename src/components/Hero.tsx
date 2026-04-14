@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useState, useEffect, memo } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import facilityImg from '../assets/facility.jpg';
+import facilityImg from '../assets/gallery/RetlsenHomepage.jpeg';
 import manufacturing1 from '../assets/manufacturing-1.jpg';
 import manufacturing2 from '../assets/manufacturing-2.jpg';
 import OptimizedImage from './OptimizedImage';
