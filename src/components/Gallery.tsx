@@ -30,12 +30,14 @@ import airCeiling from '../assets/gallery/AirFiltrationCeiling.jpeg';
 import dmWaterPlant from '../assets/gallery/DMwaterplant.jpeg';
 import diffGauge from '../assets/gallery/DiffrentialPressureGauge.jpeg';
 import pipelineProd from '../assets/gallery/pipelineproductionarea.jpeg';
+import retlsenHome from '../assets/gallery/RetlsenHomepage.jpeg';
 import OptimizedImage from './OptimizedImage';
 
 const CATEGORIES = ['Manufacturing', 'Quality Control', 'Infrastructure'] as const;
 type Category = typeof CATEGORIES[number];
 
 const galleryImages = [
+  { src: retlsenHome, alt: 'OUR FACTORY', title: 'OUR FACTORY', category: 'Manufacturing' },
   { src: gallery5, alt: 'Blister packaging production line', title: 'Advanced Packaging Line', category: 'Manufacturing' },
   { src: gallery6, alt: 'Cleanroom corridor with blue flooring', title: 'Manufacturing Zone', category: 'Manufacturing' },
   { src: compressionMachine, alt: 'Compression tablet machine', title: 'Compression Tablet Machine', category: 'Manufacturing' },
