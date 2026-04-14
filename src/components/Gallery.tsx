@@ -9,7 +9,6 @@ import gallery10 from '../assets/gallery/gallery-10.jpg';
 import gallery11 from '../assets/gallery/gallery-11.jpg';
 import gallery15 from '../assets/gallery/gallery-15.jpg';
 import gallery23 from '../assets/gallery/gallery-23.jpg';
-import gallery24 from '../assets/gallery/gallery-24.jpg';
 import gallery26 from '../assets/gallery/gallery-26.jpg';
 import compressionMachine from '../assets/gallery/compressiontasb.jpeg';
 import qualityprocess1 from '../assets/gallery/qualityprocess1.jpeg';
@@ -51,15 +50,14 @@ const galleryImages = [
   { src: qualityprocess3, alt: 'Quality control inspection station', title: '', category: 'Quality Control' },
   { src: qualityprocess6, alt: 'Microbiology testing lab', title: '', category: 'Quality Control' },
   { src: gallery23, alt: 'High-speed blister packing machine', title: 'Advanced manufacturing process', category: 'Manufacturing' },
-  { src: gallery24, alt: 'Finished product storage facility', title: 'Controlled Storage', category: 'Infrastructure' },
   { src: qualityprocess5, alt: 'Chemical analysis equipment', title: '', category: 'Quality Control' },
   { src: gallery26, alt: 'Pharmaceutical compounding area', title: 'Advanced Capsules filling', category: 'Manufacturing' },
   { src: qualityprocess4, alt: 'Quality assurance process', title: '', category: 'Quality Control' },
   { src: qualityprocess7, alt: 'Quality testing process', title: '', category: 'Quality Control' },
   { src: rawmat1, alt: 'Raw material storage 1', title: 'Raw Material Storage', category: 'Infrastructure' },
-  { src: rawmat2, alt: 'Raw material storage 2', title: 'Raw Material Storage', category: 'Infrastructure' },
-  { src: corridor1, alt: 'Corridor II Production Floor 1', title: 'Corridor II Production Floor', category: 'Infrastructure' },
-  { src: corridor2, alt: 'Corridor II Production Floor 2', title: 'Corridor II Production Floor', category: 'Infrastructure' },
+  { src: rawmat2, alt: 'Raw material storage 2', title: 'Warehouse', category: 'Infrastructure' },
+  { src: corridor1, alt: 'Corridor II Production Floor 1', title: 'Corridor II Production Floor', category: 'Manufacturing' },
+  { src: corridor2, alt: 'Corridor II Production Floor 2', title: 'Corridor II Production Floor', category: 'Manufacturing' },
   { src: ahuArea, alt: 'Air Filtration AHU Area', title: 'Air Filtration AHU Area', category: 'Infrastructure' },
   { src: ahuGrill, alt: 'Air Filtration AHU Grill', title: 'Air Filtration AHU Grill', category: 'Infrastructure' },
   { src: ahuReturn, alt: 'Air Filtration AHU Return', title: 'Air Filtration AHU Return', category: 'Infrastructure' },
