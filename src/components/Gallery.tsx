@@ -42,20 +42,20 @@ const galleryImages = [
   { src: gallery6, alt: 'Cleanroom corridor with blue flooring', title: 'Manufacturing Zone', category: 'Manufacturing' },
   { src: compressionMachine, alt: 'Compression tablet machine', title: 'Compression Tablet Machine', category: 'Manufacturing' },
   { src: gallery2, alt: 'Pharmaceutical tablets', title: 'Precision Manufacturing', category: 'Manufacturing' },
-  { src: qualityprocess1, alt: 'Cleanroom worker', title: 'Quality Control Process', category: 'Quality Control' },
+  { src: qualityprocess1, alt: 'Cleanroom worker', title: '', category: 'Quality Control' },
   { src: gallery4, alt: 'Blister packaging machine', title: 'Automated Packaging', category: 'Manufacturing' },
   { src: gallery10, alt: 'Industrial machinery', title: 'Advanced Manufacturing Process', category: 'Manufacturing' },
   { src: gallery11, alt: 'Sterile manufacturing facility', title: 'Advanced capsules filling', category: 'Manufacturing' },
-  { src: qualityprocess2, alt: 'Advanced testing laboratory', title: 'Research & Development', category: 'Quality Control' },
+  { src: qualityprocess2, alt: 'Advanced testing laboratory', title: '', category: 'Quality Control' },
   { src: gallery15, alt: 'Sterile packaging environment', title: 'Manufacturing Zone', category: 'Manufacturing' },
-  { src: qualityprocess3, alt: 'Quality control inspection station', title: 'Inspection Unit', category: 'Quality Control' },
-  { src: qualityprocess6, alt: 'Microbiology testing lab', title: 'Microbiology Lab', category: 'Quality Control' },
+  { src: qualityprocess3, alt: 'Quality control inspection station', title: '', category: 'Quality Control' },
+  { src: qualityprocess6, alt: 'Microbiology testing lab', title: '', category: 'Quality Control' },
   { src: gallery23, alt: 'High-speed blister packing machine', title: 'Advanced manufacturing process', category: 'Manufacturing' },
   { src: gallery24, alt: 'Finished product storage facility', title: 'Controlled Storage', category: 'Infrastructure' },
-  { src: qualityprocess5, alt: 'Chemical analysis equipment', title: 'Chemical Analysis', category: 'Quality Control' },
+  { src: qualityprocess5, alt: 'Chemical analysis equipment', title: '', category: 'Quality Control' },
   { src: gallery26, alt: 'Pharmaceutical compounding area', title: 'Advanced Capsules filling', category: 'Manufacturing' },
-  { src: qualityprocess4, alt: 'Quality assurance process', title: 'Quality Assurance', category: 'Quality Control' },
-  { src: qualityprocess7, alt: 'Quality testing process', title: 'Quality Testing', category: 'Quality Control' },
+  { src: qualityprocess4, alt: 'Quality assurance process', title: '', category: 'Quality Control' },
+  { src: qualityprocess7, alt: 'Quality testing process', title: '', category: 'Quality Control' },
   { src: rawmat1, alt: 'Raw material storage 1', title: 'Raw Material Storage', category: 'Infrastructure' },
   { src: rawmat2, alt: 'Raw material storage 2', title: 'Raw Material Storage', category: 'Infrastructure' },
   { src: corridor1, alt: 'Corridor II Production Floor 1', title: 'Corridor II Production Floor', category: 'Infrastructure' },
@@ -192,9 +192,11 @@ function Gallery() {
                         <ZoomIn size={18} />
                       </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-                      <h4 className="text-white font-bold">{image.title}</h4>
-                    </div>
+                    {image.title && (
+                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                        <h4 className="text-white font-bold">{image.title}</h4>
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
@@ -252,7 +254,9 @@ function Gallery() {
                   whileTap={{ scale: 1.05 }}
                 />
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
-                  <p className="text-white font-bold text-lg">{filteredImages[lightboxIndex].title}</p>
+                  {filteredImages[lightboxIndex].title && (
+                    <p className="text-white font-bold text-lg">{filteredImages[lightboxIndex].title}</p>
+                  )}
                   <p className="text-white/60 text-sm uppercase tracking-widest">{filteredImages[lightboxIndex].category}</p>
                 </div>
               </motion.div>
