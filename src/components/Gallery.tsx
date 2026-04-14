@@ -55,7 +55,7 @@ const galleryImages = [
   { src: qualityprocess4, alt: 'Quality assurance process', title: '', category: 'Quality Control' },
   { src: qualityprocess7, alt: 'Quality testing process', title: '', category: 'Quality Control' },
   { src: rawmat1, alt: 'Warehouse', title: 'Warehouse', category: 'Infrastructure' },
-  { src: rawmat2, alt: 'Raw Material Storage', title: 'Raw Material Storage', category: 'Infrastructure' },
+  { src: rawmat2, alt: 'Warehouse', title: 'Warehouse', category: 'Infrastructure' },
   { src: corridor1, alt: 'Corridor II Production Floor 1', title: 'Corridor II Production Floor', category: 'Manufacturing' },
   { src: corridor2, alt: 'Corridor II Production Floor 2', title: 'Corridor II Production Floor', category: 'Manufacturing' },
   { src: ahuArea, alt: 'Air Filtration AHU Area', title: 'Air Filtration AHU Area', category: 'Infrastructure' },
