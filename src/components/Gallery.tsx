@@ -8,13 +8,10 @@ import gallery6 from '../assets/gallery/gallery-6.jpg';
 import gallery10 from '../assets/gallery/gallery-10.jpg';
 import gallery11 from '../assets/gallery/gallery-11.jpg';
 import gallery15 from '../assets/gallery/gallery-15.jpg';
-import gallery19 from '../assets/gallery/gallery-19.jpg';
-import gallery21 from '../assets/gallery/gallery-21.jpg';
-import gallery22 from '../assets/gallery/gallery-22.jpg';
 import gallery23 from '../assets/gallery/gallery-23.jpg';
 import gallery24 from '../assets/gallery/gallery-24.jpg';
 import gallery26 from '../assets/gallery/gallery-26.jpg';
-import compressionMachine from '../assets/gallery/compression-machine.jpeg';
+import compressionMachine from '../assets/gallery/compressiontasb.jpeg';
 import qualityprocess1 from '../assets/gallery/qualityprocess1.jpeg';
 import qualityprocess2 from '../assets/gallery/qualityprocess2.jpeg';
 import qualityprocess3 from '../assets/gallery/qualityprocess3.jpeg';
@@ -22,6 +19,17 @@ import qualityprocess4 from '../assets/gallery/qualityprocess4.jpeg';
 import qualityprocess5 from '../assets/gallery/qualityprocess5.jpeg';
 import qualityprocess6 from '../assets/gallery/qualityprocess6.jpeg';
 import qualityprocess7 from '../assets/gallery/qualityprocess7.jpeg';
+import rawmat1 from '../assets/gallery/rawmat1.jpeg';
+import rawmat2 from '../assets/gallery/rawmat2.jpeg';
+import corridor1 from '../assets/gallery/Corridor -II Production Floor1.jpeg';
+import corridor2 from '../assets/gallery/Corridor -II Production Floor2.jpeg';
+import ahuArea from '../assets/gallery/AirFiltration-AHUArea.jpeg';
+import ahuGrill from '../assets/gallery/AirFiltration-AHUGrill.jpeg';
+import ahuReturn from '../assets/gallery/AirFiltration-AHUreturn.jpeg';
+import airCeiling from '../assets/gallery/AirFiltrationCeiling.jpeg';
+import dmWaterPlant from '../assets/gallery/DMwaterplant.jpeg';
+import diffGauge from '../assets/gallery/DiffrentialPressureGauge.jpeg';
+import pipelineProd from '../assets/gallery/pipelineproductionarea.jpeg';
 import OptimizedImage from './OptimizedImage';
 
 const CATEGORIES = ['Manufacturing', 'Quality Control', 'Infrastructure'] as const;
@@ -39,16 +47,24 @@ const galleryImages = [
   { src: qualityprocess2, alt: 'Advanced testing laboratory', title: 'Research & Development', category: 'Quality Control' },
   { src: gallery15, alt: 'Sterile packaging environment', title: 'Manufacturing Zone', category: 'Manufacturing' },
   { src: qualityprocess3, alt: 'Quality control inspection station', title: 'Inspection Unit', category: 'Quality Control' },
-  { src: gallery19, alt: 'Storage facility overview', title: 'Raw Material Storage', category: 'Infrastructure' },
-  { src: qualityprocess4, alt: 'Microbiology testing lab', title: 'Microbiology Lab', category: 'Quality Control' },
-  { src: gallery21, alt: 'Purified water system', title: 'Water Treatment Plant', category: 'Infrastructure' },
-  { src: gallery22, alt: 'HVAC system', title: 'Air Filtration System', category: 'Infrastructure' },
+  { src: qualityprocess6, alt: 'Microbiology testing lab', title: 'Microbiology Lab', category: 'Quality Control' },
   { src: gallery23, alt: 'High-speed blister packing machine', title: 'Advanced manufacturing process', category: 'Manufacturing' },
   { src: gallery24, alt: 'Finished product storage facility', title: 'Controlled Storage', category: 'Infrastructure' },
   { src: qualityprocess5, alt: 'Chemical analysis equipment', title: 'Chemical Analysis', category: 'Quality Control' },
   { src: gallery26, alt: 'Pharmaceutical compounding area', title: 'Advanced Capsules filling', category: 'Manufacturing' },
-  { src: qualityprocess6, alt: 'Quality assurance process', title: 'Quality Assurance', category: 'Quality Control' },
-  { src: qualityprocess7, alt: 'Quality testing process', title: 'Quality Testing', category: 'Quality Control' }
+  { src: qualityprocess4, alt: 'Quality assurance process', title: 'Quality Assurance', category: 'Quality Control' },
+  { src: qualityprocess7, alt: 'Quality testing process', title: 'Quality Testing', category: 'Quality Control' },
+  { src: rawmat1, alt: 'Raw material storage 1', title: 'Raw Material Storage', category: 'Infrastructure' },
+  { src: rawmat2, alt: 'Raw material storage 2', title: 'Raw Material Storage', category: 'Infrastructure' },
+  { src: corridor1, alt: 'Corridor II Production Floor 1', title: 'Corridor II Production Floor', category: 'Infrastructure' },
+  { src: corridor2, alt: 'Corridor II Production Floor 2', title: 'Corridor II Production Floor', category: 'Infrastructure' },
+  { src: ahuArea, alt: 'Air Filtration AHU Area', title: 'Air Filtration AHU Area', category: 'Infrastructure' },
+  { src: ahuGrill, alt: 'Air Filtration AHU Grill', title: 'Air Filtration AHU Grill', category: 'Infrastructure' },
+  { src: ahuReturn, alt: 'Air Filtration AHU Return', title: 'Air Filtration AHU Return', category: 'Infrastructure' },
+  { src: airCeiling, alt: 'Air Filtration Ceiling', title: 'Air Filtration Ceiling', category: 'Infrastructure' },
+  { src: dmWaterPlant, alt: 'DM Water Plant', title: 'DM Water Plant', category: 'Infrastructure' },
+  { src: diffGauge, alt: 'Differential Pressure Gauge', title: 'Differential Pressure Gauge', category: 'Infrastructure' },
+  { src: pipelineProd, alt: 'Pipeline Production Area', title: 'Pipeline Production Area', category: 'Infrastructure' }
 ];
 
 function Gallery() {
