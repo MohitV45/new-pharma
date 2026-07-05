@@ -56,7 +56,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Direct Email',
-      detail: 'info@reltsenhealthcare.com',
+      detail: 'info@reltsen.com',
       subDetail: 'Corporate relations'
     },
     {
